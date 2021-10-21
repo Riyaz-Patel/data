@@ -252,9 +252,7 @@ Statistiques descriptives
 
     ggplot(stack(salary_f), aes(x = ind, y = values, color=ind)) +
       geom_boxplot()
-
-![Rplot01](https://user-images.githubusercontent.com/74362276/138365543-4ed09b12-3ce4-4d11-afd0-ed7629506fa8.png)
-
+![Rplot](https://user-images.githubusercontent.com/74362276/138365836-b7d7b104-fbe4-4fdb-a57d-a7ebdacf2e14.png)
 
 
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-2.png)
