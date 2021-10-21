@@ -1,0 +1,126 @@
+---
+title: "bdd"
+output: md_document
+---
+
+
+## Description
+
+Ce fichier fournit des données sur les salaires nets horaires issus des bases Tous salariés (fichier salariés au lieu de résidence). Les indicateurs sont repartis selon le sexe, l'âge, la catégorie socioprofessionnelle (hors agriculture).
+
+
+## Preview
+
+
+```{r}
+head(salary_clean)
+```
+## Dataset Characteristics
+
+- 100 lignes (1 ligne par departement)
+- 25 colonnes 
+- 41 ko
+
+
+## Variables
+
+| Variables | Description |
+|-------:|:-------|
+| COD_VAR | LIB_VAR |
+| SNHM19 | Salaire net horaire moyen en 2019 |
+| SNHMC19 | Salaire net hor. Moy. Cadres sup. en 2019 |
+| SNHMP19 | Salaire net hor. moy. prof inter. en 2019 |
+| SNHME19 | Salaire net hor. moy. employés en 2019 |
+| SNHMO19 | Salaire net hor. moy. ouvriers en 2019 |
+| SNHMF19 | Salaire net horaire moyen F en 2019 |
+| SNHMFC19 | Salaire net hor. moy. F cadres sup. en 2019 |
+| SNHMFP19 | Salaire net hor. moy. F prof inter. en 2019  |
+| SNHMFE19 | Salaire net hor. moy. F employées en 2019  |
+| SNHMFO19 | Salaire net hor. moy. F ouvriers en 2019  |
+| SNHMH19 | Salaire net horaire moyen H en 2019 |
+| SNHMHC19 | Salaire net hor. moy. H cadres sup. en 2019 |
+| SNHMHP19 | Salaire net hor. moy. H prof inter. en 2019 |
+| SNHMHE19 | Salaire net hor. moy. H employés en 2019  |
+| SNHMHO19 | Salaire net hor. moy. H ouvriers en 2019  |
+| SNHM1819 | Salaire net horaire moyen  18-25 ans en 2019  |
+| SNHM2619 | Salaire net horaire moyen  26-50 ans en 2019 |
+| SNHM5019 | Salaire net horaire moyen  18-25 ans en 2019 |
+| SNHMF1819 | Salaire net horaire moyen F 18-25 ans en 2019 |
+| SNHMF2619 | Salaire net horaire moyen F 26-50 ans en 2019  |
+| SNHMF5019 | Salaire net horaire moyen F plus de 50 ans en 2019 |
+| SNHMH1819 | Salaire net horaire moyen H 18-25 ans en 2019 |
+| SNHMH2619 | Salaire net horaire moyen H 26-50 ans en 2019 |
+| SNHMH5019 | Salaire net horaire moyen H plus de 50 ans en 2019 |
+
+
+## Exemples d'utilisation / Intérêt
+
+- Lien entre le taux de vaccination par departement et le revenu
+- Analyse des soins, diagnostics, prescription médicament, santé des enfants, mortalité, par departement selon le revenu
+
+
+## Licence
+Les données issues des Bases Tous Salariés sont soumises au secret statistique. Aucune statistique n'est diffusée pour les zones de moins de 2 000 habitants. Pour quelques zones de 2 000 habitants ou plus, qui ne respectent pas les seuils, il n'est pas non plus possible de diffuser des résultats. À savoir, chaque case du tableau doit comporter au moins 5 salariés et aucun salarié ne doit représenter plus de 80% de la masse salariale de la case.
+
+## Source
+https://www.insee.fr/fr/statistiques/2021266 (Paru le : 26/08/2021)
+
+## Datamanagement
+```{r}
+#data management
+
+salary = read.csv2("/Users/riyazpatel/Desktop/cc_bases-tous-salaries_2019_DEP.csv")
+
+library(dplyr)
+
+names(salary) = c("Code_dep", "Salaire_net_h", "Cadres_sup" ,"Profession_intermediaire","employés",
+                   "ouvriers", "Femmes",  "F_cadre_sup", "F_prof_int","F_employées",
+                   "F_ouvriers", "Hommes","H_cadre_sup", "H_prof_int",  "H_employés", 
+                   "H_ouvriers","18_25", "26_50","+50", "F_18_25", "F_26_50",  "F_+50",
+                   "H_18_25",  "H_26_50", "H_+50")
+
+salary = sapply(salary, function(x) {
+    if(is.character(x)) as.numeric(as.character(x)) else x
+  })
+
+
+salary_clean=as.data.frame(salary)
+
+```
+## Statistiques descriptives
+
+
+```{r}
+
+salary_hf = salary_clean%>%
+  select (Femmes, Hommes)
+
+ggplot(stack(salary_hf), aes(x = ind, y = values, color=ind)) +
+  geom_boxplot()
+
+salary_f = salary_clean%>%
+  select(F_cadre_sup, F_prof_int, F_employées, F_ouvriers)
+
+ggplot(stack(salary_f), aes(x = ind, y = values, color=ind)) +
+  geom_boxplot()
+
+salary_h = salary_clean%>%
+  select (H_cadre_sup, H_prof_int, H_ouvriers, H_employés)
+
+ggplot(stack(salary_h), aes(x = ind, y = values, color=ind)) +
+  geom_boxplot()
+
+salary_hf_cadre = salary_clean%>%
+  select(F_cadre_sup, H_cadre_sup)
+
+ggplot(stack(salary_hf_cadre), aes(x = ind, y = values, color=ind)) +
+  geom_boxplot()
+
+salary_hf_ouvriers = salary_clean%>%
+  select(F_ouvriers, H_ouvriers)
+
+ggplot(stack(salary_hf_ouvriers), aes(x = ind, y = values, color=ind)) +
+  geom_boxplot()
+
+```
+
