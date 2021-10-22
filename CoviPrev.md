@@ -490,7 +490,7 @@ Statistiques descriptives
 
     ## Warning: Removed 5 row(s) containing missing values (geom_path).
     
-    ![Rplot55](https://user-images.githubusercontent.com/74362276/138417345-1a2293f0-a3c1-40d3-837a-bd638f2a6ce6.png)
+ ![Rplot55](https://user-images.githubusercontent.com/74362276/138417345-1a2293f0-a3c1-40d3-837a-bd638f2a6ce6.png)
 
     
     
