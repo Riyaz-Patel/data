@@ -219,6 +219,10 @@ Statistiques descriptives
            subtitle = "Premiere vague : 23 Mars - 26 Aout
            Deuxième vague : à partir du 21 Septembre")
 
+![Rplot11](https://user-images.githubusercontent.com/74362276/138376205-b75251a0-47bd-4767-b840-41ca9d5cc574.png)
+
+
+
 ![](CoviPrev_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
     ggplot(covi_clean2, aes(x = date, y= portmasque, color = age)) +
@@ -233,6 +237,10 @@ Statistiques descriptives
 
     ## Warning: Removed 5 row(s) containing missing values (geom_path).
 
+![Rplot01](https://user-images.githubusercontent.com/74362276/138376229-7b3dc338-6847-4c9f-8945-8746617894f3.png)
+
+
+
 ![](CoviPrev_files/figure-markdown_strict/unnamed-chunk-3-2.png)
 
     ggplot(covi_clean2, aes(x = date, y= depression, color = age)) +
@@ -246,5 +254,17 @@ Statistiques descriptives
            Deuxième vague : à partir du 21 Septembre")
 
     ## Warning: Removed 5 row(s) containing missing values (geom_path).
+    
+![Rplot55](https://user-images.githubusercontent.com/74362276/138376235-fc436193-919a-4343-9b39-cd92ac067f31.png)
+
+    
 
 ![](CoviPrev_files/figure-markdown_strict/unnamed-chunk-3-3.png)
+
+
+![Figure_mesures_prevention_CoviPrev_Vague28](https://user-images.githubusercontent.com/74362276/138376270-347fb746-a2e6-47e7-9088-82f504ed2aaa.jpeg)
+
+![Tab_Le point sur_CoviPrev_V28](https://user-images.githubusercontent.com/74362276/138376307-19cf937d-6827-4c2c-835e-c4d5f6758573.jpeg)
+
+
+
