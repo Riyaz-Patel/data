@@ -410,6 +410,8 @@ salariale de la case.
     library(ggplot2)
     ggplot(stack(salary_hf), aes(x = ind, y = values, color=ind)) +
       geom_boxplot()
+      
+![unnamed-chunk-3-1](https://user-images.githubusercontent.com/74362276/138416895-882813c0-2271-4c52-9fbb-50f0bc9a4846.png)
 
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
@@ -418,6 +420,9 @@ salariale de la case.
 
     ggplot(stack(salary_f), aes(x = ind, y = values, color=ind)) +
       geom_boxplot()
+![unnamed-chunk-3-2](https://user-images.githubusercontent.com/74362276/138416937-6780767b-af76-4f85-9e56-cdeb843c61f0.png)
+
+
 
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-2.png)
 
@@ -426,6 +431,9 @@ salariale de la case.
 
     ggplot(stack(salary_h), aes(x = ind, y = values, color=ind)) +
       geom_boxplot()
+![unnamed-chunk-3-3](https://user-images.githubusercontent.com/74362276/138416956-f0d0c32a-f61d-4949-b654-e3cfb2101eee.png)
+
+
 
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-3.png)
 
@@ -434,6 +442,11 @@ salariale de la case.
 
     ggplot(stack(salary_hf_cadre), aes(x = ind, y = values, color=ind)) +
       geom_boxplot()
+      
+      
+   ![unnamed-chunk-3-4](https://user-images.githubusercontent.com/74362276/138416974-9724fa5e-64d5-4bf2-851a-5c4371801405.png)
+
+  
 
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-4.png)
 
@@ -442,5 +455,9 @@ salariale de la case.
 
     ggplot(stack(salary_hf_ouvriers), aes(x = ind, y = values, color=ind)) +
       geom_boxplot()
+
+![unnamed-chunk-3-5](https://user-images.githubusercontent.com/74362276/138417001-324e28ca-7e25-4818-8f4b-cf2d46bff744.png)
+
+
 
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-5.png)
