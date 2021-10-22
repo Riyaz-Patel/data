@@ -459,5 +459,13 @@ salariale de la case.
 ![unnamed-chunk-3-5](https://user-images.githubusercontent.com/74362276/138417001-324e28ca-7e25-4818-8f4b-cf2d46bff744.png)
 
 
+salary_h_age = salary_clean%>%
+  select("H_18_25", "H_26_50", "H_+50")
+
+ggplot(stack(salary_h_age), aes(x = ind, y = values, color=ind)) +
+  geom_boxplot()
+  
+  
+![00000b](https://user-images.githubusercontent.com/74362276/138426797-d871c61f-12d3-4802-8893-fa2485630868.png)
 
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-5.png)
