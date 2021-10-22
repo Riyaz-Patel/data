@@ -454,6 +454,9 @@ Statistiques descriptives
       labs(title = "Evolution de l'anxiété selon l'âge",
            subtitle = "Premiere vague : 23 Mars - 26 Aout
            Deuxième vague : à partir du 21 Septembre")
+           
+ ![Rplot11](https://user-images.githubusercontent.com/74362276/138417280-770c124b-cd11-4131-ad9f-4ba41f8e1476.png)
+
 
 ![](CoviPrev_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
@@ -469,6 +472,10 @@ Statistiques descriptives
 
     ## Warning: Removed 5 row(s) containing missing values (geom_path).
 
+![Rplot01](https://user-images.githubusercontent.com/74362276/138417363-c7959a9e-ecf7-47a2-8745-e2e741987275.png)
+
+
+
 ![](CoviPrev_files/figure-markdown_strict/unnamed-chunk-3-2.png)
 
     ggplot(covi_clean2, aes(x = date, y= depression, color = age)) +
@@ -482,5 +489,11 @@ Statistiques descriptives
            Deuxième vague : à partir du 21 Septembre")
 
     ## Warning: Removed 5 row(s) containing missing values (geom_path).
+    
+    ![Rplot55](https://user-images.githubusercontent.com/74362276/138417345-1a2293f0-a3c1-40d3-837a-bd638f2a6ce6.png)
+
+    
+    
+   
 
 ![](CoviPrev_files/figure-markdown_strict/unnamed-chunk-3-3.png)
