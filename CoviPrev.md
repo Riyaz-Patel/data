@@ -494,6 +494,6 @@ Statistiques descriptives
 
     
     
-   
+![Figure_mesures_prevention_CoviPrev_Vague28](https://user-images.githubusercontent.com/74362276/138417463-3135b72a-b1b3-4475-83b5-aa9f4cc6ed02.jpeg)
 
 ![](CoviPrev_files/figure-markdown_strict/unnamed-chunk-3-3.png)
