@@ -360,13 +360,7 @@ socioprofessionnelle (hors agriculture).
 
 ## Licence
 
-Les données issues des Bases Tous Salariés sont soumises au secret
-statistique. Aucune statistique n’est diffusée pour les zones de moins
-de 2 000 habitants. Pour quelques zones de 2 000 habitants ou plus, qui
-ne respectent pas les seuils, il n’est pas non plus possible de diffuser
-des résultats. À savoir, chaque case du tableau doit comporter au moins
-5 salariés et aucun salarié ne doit représenter plus de 80% de la masse
-salariale de la case.
+opensource
 
 ## Source
 
