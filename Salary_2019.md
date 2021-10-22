@@ -236,6 +236,8 @@ Datamanagement
 Statistiques descriptives
 -------------------------
 
+Différence de salaire entre les hommes et les femmes en France en 2019
+-------------------------
     salary_hf = salary_clean%>%
       select (Femmes, Hommes)
     library(ggplot2)
@@ -245,6 +247,9 @@ Statistiques descriptives
 ![Rplot01](https://user-images.githubusercontent.com/74362276/138365784-301845da-4093-492f-935c-5c6741bc7c87.png)
 
 
+Différence de salaire chez les femmes par catégorie professionnelle
+-------------------------
+
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
     salary_f = salary_clean%>%
@@ -252,8 +257,12 @@ Statistiques descriptives
 
     ggplot(stack(salary_f), aes(x = ind, y = values, color=ind)) +
       geom_boxplot()
+  
 ![Rplot](https://user-images.githubusercontent.com/74362276/138365836-b7d7b104-fbe4-4fdb-a57d-a7ebdacf2e14.png)
 
+
+Différence de salaire chez les hommes par catégorie professionnelle
+-------------------------
 
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-2.png)
 
@@ -266,6 +275,8 @@ Statistiques descriptives
 ![Rplot02](https://user-images.githubusercontent.com/74362276/138365591-873196d9-2c6e-4d5d-a395-c8cda68eb943.png)
 
 
+Différence de salaire entre les hommes et les femmes de cadre supérieur
+-------------------------
 
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-3.png)
 
@@ -279,6 +290,8 @@ Statistiques descriptives
 ![Rplot03](https://user-images.githubusercontent.com/74362276/138365606-0fb86123-cc89-499a-8241-161812c2f79a.png)
 
 
+Différence de salaire entre les hommes et les femmes ouvriers
+-------------------------
 
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-4.png)
 
@@ -289,7 +302,6 @@ Statistiques descriptives
       geom_boxplot()
       
  ![Rplot04](https://user-images.githubusercontent.com/74362276/138365663-35ec1ce8-9ba4-48fd-b075-fef13c8ca52a.png)
-
 
 
 ![](Salary_2019_files/figure-markdown_strict/unnamed-chunk-3-5.png)
